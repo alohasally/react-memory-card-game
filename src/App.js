@@ -10,6 +10,8 @@ const cardImages = [
   { "src": "img/scroll-1.png", matched: false },
   { "src": "img/shield-1.png", matched: false },
   { "src": "img/sword-1.png", matched: false },
+  { "src": "img/helmet-2.png", matched: false },
+  { "src": "img/helmet-3.png", matched: false },
 ]
 
 function App() {
@@ -24,6 +26,9 @@ function App() {
       const shuffledCards = [...cardImages, ...cardImages]
        .sort(() => Math.random()- 0.5)
        .map((card) => ({...card, id: Math.random()}))
+
+       setChoiceOne(null)
+       setChoiceTwo(null)
        setCards(shuffledCards)
        setTurns(0)
     }
@@ -62,6 +67,11 @@ function App() {
       setDisabled(false);
     }
 
+    // start a new game automatically
+    useEffect(() => {
+      shuffleCards()
+    }, [])
+
   return (
     <div className="App">
       <h1>병우의 포켓몬 메모리게임😍</h1>
@@ -78,7 +88,7 @@ function App() {
           
         ))}
       </div> 
-   
+      <p> Turns : {turns} </p>
     </div>
   );
 }
