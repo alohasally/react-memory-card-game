@@ -4,14 +4,16 @@ import SingleCard from './components/SingleCard'
 
 
 const cardImages = [
-  { "src": "img/helmet-1.png", matched: false },
-  { "src": "img/potion-1.png", matched: false },
-  { "src": "img/ring-1.png", matched: false },
-  { "src": "img/scroll-1.png", matched: false },
-  { "src": "img/shield-1.png", matched: false },
-  { "src": "img/sword-1.png", matched: false },
-  { "src": "img/helmet-2.png", matched: false },
-  { "src": "img/helmet-3.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/helmet-1.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/potion-1.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/ring-1.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/scroll-1.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/shield-1.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/sword-1.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/helmet-2.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/helmet-3.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/1.png", matched: false },
+  { "src": "https://alohasally.github.io/react-memory-card-game/img/2.png", matched: false },
 ]
 
 function App() {
@@ -74,7 +76,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>병우의 포켓몬 메모리게임😍</h1>
+      <h1>가은이와 병우의 포켓몬 게임😍</h1>
       <button onClick={shuffleCards}>New Game</button>
       <div className='card-grid'>
         {cards.map((card) => (
@@ -82,7 +84,7 @@ function App() {
           key={card.id} 
           card={card} 
           handleChoice={handleChoice}
-          flipped={card === choiceOne || card === choiceTwo || card.matched} 
+          flipped={card === choiceOne || card === choiceTwo || card.matched } 
           disabled={disabled}
           />
           
